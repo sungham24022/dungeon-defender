@@ -1,0 +1,18 @@
+CANVAS_WIDTH = 350
+CANVAS_HEIGHT = 700
+FPS = 60
+TITLE = "Dungeon Defender"
+
+PLAYER_SPEED = 7
+PLAYER_HP = 3
+BULLET_SPEED = 15
+FIRE_RATE = 6
+
+ULTIMATE_MAX = 100
+ULTIMATE_DURATION = 300  # frames
+
+BOSS_KILL_THRESHOLD = 100
+
+HOST = "0.0.0.0"
+import os
+PORT = int(os.environ.get("PORT", 7860))

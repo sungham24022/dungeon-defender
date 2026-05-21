@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d0710;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  user-select: none;
+}
+
+h1 {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: #c864ff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+#gameCanvas {
+  display: block;
+  border: 2px solid #5a2888;
+  box-shadow: 0 0 24px #7b2fbe55;
+  background: #140a1e;
+  /* scale canvas on small screens */
+  max-width: 100vw;
+  image-rendering: pixelated;
+}
+
+/* ── Mobile controls ────────────────────────────────────────────── */
+#mobile-controls {
+  display: none;
+  margin-top: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  #mobile-controls { display: flex; }
+  #gameCanvas {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+.ctrl-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  width: 64px; height: 52px;
+  border: none; border-radius: 10px;
+  background: #3a1860;
+  color: #e0c0ff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  touch-action: none;
+  transition: background 0.1s;
+  box-shadow: 0 3px 0 #1a0830;
+}
+
+.btn:active, .btn.active {
+  background: #6030c0;
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #1a0830;
+}
+
+.btn-fire  { background: #7a3000; color: #ffdd88; width: 80px; }
+.btn-ult   { background: #305070; color: #88ddff; width: 80px; }
+.btn-start { background: #204020; color: #88ff88; width: 120px; height: 44px; font-size: 1rem; }

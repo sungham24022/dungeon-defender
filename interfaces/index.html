@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeon Defender</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <h1>⚔️ Dungeon Defender</h1>
+
+  <canvas id="gameCanvas" width="350" height="700"></canvas>
+
+  <!-- Mobile / touch controls -->
+  <div id="mobile-controls">
+    <div class="ctrl-row">
+      <button class="btn btn-fire" data-key="space">🏹 FIRE</button>
+      <button class="btn btn-ult"  data-key="ultimate">✨ Q</button>
+    </div>
+    <div class="ctrl-row">
+      <button class="btn" data-key="left">◀</button>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <button class="btn" data-key="up">▲</button>
+        <button class="btn" data-key="down">▼</button>
+      </div>
+      <button class="btn" data-key="right">▶</button>
+    </div>
+    <div class="ctrl-row">
+      <button class="btn btn-start" data-key="start">▶ START</button>
+      <button class="btn btn-start" data-key="restart" style="background:#302000">↺ RESTART</button>
+    </div>
+  </div>
+
+  <script src="/static/js/renderer.js"></script>
+</body>
+</html>
